@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: Checking out!
         uses: actions/checkout@v3
-      - name: Print github context
-        run: echo ${{ github.context }}
+      
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
        
 #       - name: Use Node.js
 #         uses: actions/setup-node@v3
