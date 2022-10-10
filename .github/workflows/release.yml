@@ -10,14 +10,16 @@ jobs:
       - name: Checking out!
         uses: actions/checkout@v3
       
-      - name: Dump GitHub context
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
        
 #       - name: Use Node.js
 #         uses: actions/setup-node@v3
 #         with:
 #           node-version: '12.x'
+
+#       - name: Dump GitHub context
+#         id: github_context_step
+#         run: echo '${{ toJSON(github) }}'
+
 
 #       - run: npm install
 #       - run: npm run build --if-present
