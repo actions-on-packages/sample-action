@@ -1,6 +1,7 @@
 name: 'test hydro'
 on: # rebuild any PRs and main branch changes
   push:
+  workflow_dispatch:
   
 jobs:
 
