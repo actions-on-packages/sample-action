@@ -7,6 +7,9 @@ on: # rebuild any PRs and main branch changes
 
 jobs:
   package-and-publish: # make sure the action works on a clean machine without building
+    permissions:
+      packages: write
+    
     runs-on: ubuntu-latest
     steps:
       - name: Checking out!
@@ -34,7 +37,7 @@ jobs:
 #           output: 'minify/src/' # (OPTIONAL)
         
       - name: Publish action 
-        uses: actions-on-packages/package-action@0.4.2
+        uses: actions-on-packages/package-action@0.4.4
 #        with: 
 #            path: 'dist/'
         
